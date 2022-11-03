@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
@@ -37,10 +39,17 @@ public class Runner implements CommandLineRunner {
         orderRepository.save(order1);
         order=orderRepository.findById(1L).get();
         System.out.println(order);
-        orderRepository.delete(order2);
-        orderRepository.deleteById(4L);
+        //orderRepository.delete(order2);
+        //orderRepository.deleteById(4L);
         System.out.println(orderRepository.findAll());
 
+        //System.out.println("orderRepository.findTopByOrderByProductType()= "+orderRepository.findTopByOrderByProductType());
+//        List<Order> orders1=new ArrayList<>();
+//        orders1.add(order1);
+//        orders1.add(order3);
+//        orders1.add(order5);
+        System.out.println(orderRepository.findTopByOrderByProductType());
+        System.out.println(orderRepository.findOrdersByOrderStatus(OrderStatus.RECEIVED));
 
 
     }
