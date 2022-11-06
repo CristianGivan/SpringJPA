@@ -6,12 +6,14 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table (name = "tweet_tab")
 public class Tweet {
     @Id
     @GeneratedValue
+    @Column(name = "id_tweet")
     private Long id;
 
-    @Column
+    @Column (name = "text")
     private String text;
     @ManyToOne
     @JoinColumn(name = "id_user")
@@ -46,7 +48,7 @@ public class Tweet {
         return "Tweet{" +
                 "id=" + id +
                 ", text='" + text + '\'' +
-                ", user=" + user +
-                '}';
+                ", user_id="+user.getId()+
+                 '}';
     }
 }

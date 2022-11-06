@@ -1,0 +1,4 @@
+1. de ce trebuia sa mai sterg sau adaug si din java  si nu ii sufiecrt sa fac cu bazele de date
+2. unde ar trebui sa punem add tweet to user sau comment to tweet in ce repository? are legatura cu intrerea de jos
+    Daca punem in comment am avea problema cu lazily
+3. avem nevoie de setari la cheias straina  din tabelul copil?

@@ -50,6 +50,7 @@ public class Runner implements CommandLineRunner {
 //        orders1.add(order5);
         System.out.println(orderRepository.findTopByOrderByProductType());
         System.out.println(orderRepository.findOrdersByOrderStatus(OrderStatus.RECEIVED));
+        System.out.println(orderRepository.findAllOrdersByStatusQuery(OrderStatus.PENDING));
 
 
     }
