@@ -2,3 +2,4 @@
 2. unde ar trebui sa punem add tweet to user sau comment to tweet in ce repository? are legatura cu intrerea de jos
     Daca punem in comment am avea problema cu lazily
 3. avem nevoie de setari la cheias straina  din tabelul copil?
+4. de ce im apare doar localtion in loc de date sau localdate

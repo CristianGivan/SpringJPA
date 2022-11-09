@@ -30,7 +30,7 @@ public class Runner implements CommandLineRunner {
         orderRepository.save(order4);
         orderRepository.save(order5);
 
-        Order order = orderRepository.findById(1L).get();
+        /*Order order = orderRepository.findById(1L).get();
         System.out.println(order);
         List<Order> orders = (List<Order>) orderRepository.findAll();
         //System.out.println(orders);
@@ -51,7 +51,7 @@ public class Runner implements CommandLineRunner {
         System.out.println(orderRepository.findTopByOrderByProductType());
         System.out.println(orderRepository.findOrdersByOrderStatus(OrderStatus.RECEIVED));
         System.out.println(orderRepository.findAllOrdersByStatusQuery(OrderStatus.PENDING));
-
+*/
 
     }
 }
