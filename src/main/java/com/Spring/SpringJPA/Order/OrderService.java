@@ -37,4 +37,15 @@ public class OrderService {
 
         return orderRepository.save(order);
     }
+    public Order updateOrder (Order order, Long id){
+        Order orderToBeUpdated=orderRepository.findById(id).orElseThrow(
+                ()->new OrderNotFoundException("order not founded"));
+        orderToBeUpdated.setOrderStatus(order.getOrderStatus());
+        orderToBeUpdated.setLocalDate(order.getLocalDate());
+        orderToBeUpdated.setProductType(order.getProductType());
+        return orderRepository.save(orderToBeUpdated);
+    }
+    public void deleteOrder(Long id){
+        orderRepository.deleteById(id);
+    }
 }

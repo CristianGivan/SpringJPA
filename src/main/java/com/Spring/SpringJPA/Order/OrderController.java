@@ -59,4 +59,18 @@ public class OrderController {
         System.out.println(order);
         return orderService.saveOrder(order);
     }
+    @PutMapping("/orders/{id}")
+    public Order updateOrder(@RequestBody Order updatedOrder, @PathVariable Long id){
+        try {
+            return orderService.updateOrder(updatedOrder,id);
+        } catch (OrderNotFoundException e) {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "Order not found", e
+            );
+        }
+    }
+    @DeleteMapping("/orders/{id}")
+    public void deleteOrder(@PathVariable Long id){
+        orderService.deleteOrder(id);
+    }
 }

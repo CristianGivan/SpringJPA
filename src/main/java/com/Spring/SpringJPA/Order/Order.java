@@ -46,11 +46,11 @@ public class Order {
         this.productType = productType;
     }
 
-    public LocalDate getLocation() {
+    public LocalDate getLocalDate() {
         return localDate;
     }
 
-    public void setLocation(LocalDate LocalDate) {
+    public void setLocalDate(LocalDate LocalDate) {
         this.localDate = localDate;
     }
 
